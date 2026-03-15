@@ -3,17 +3,17 @@ const app = require("./app");
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect("your_mongodb_connection_string")
+mongoose.connect("mongodb+srv://testuser:Akanksha123@cluster1.mwdwdyi.mongodb.net/youtubeSubscribersDB?retryWrites=true&w=majority")
 
-.then(() => {
+.then(()=>{
   console.log("MongoDB Connected");
 
-  app.listen(PORT, () => {
+  app.listen(PORT, ()=>{
     console.log(`Server running on port ${PORT}`);
   });
 
 })
 
-.catch(err => {
+.catch(err=>{
   console.log(err);
 });
